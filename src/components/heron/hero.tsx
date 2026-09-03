@@ -10,7 +10,7 @@ const violations = [
 export function Hero() {
   const frame = useRef<HTMLDivElement>(null);
   const [pos, setPos] = useState({ x: 446, y: 1003 });
-  const [active, setActive] = useState<number | null>(0);
+  const [active, setActive] = useState<number | null>(null);
 
   return (
     <div id="top" className="relative min-h-[100svh] overflow-hidden pt-16">

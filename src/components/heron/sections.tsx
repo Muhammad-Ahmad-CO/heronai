@@ -485,7 +485,7 @@ export function CTA() {
           src={collage3.url}
           alt="Concrete architecture illustration with a red sun"
           loading="lazy"
-          className="h-72 w-full object-cover object-top"
+          className="h-72 w-full object-cover object-center"
         />
       </div>
     </Section>
