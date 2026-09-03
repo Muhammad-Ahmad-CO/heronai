@@ -36,12 +36,6 @@ export function Statement() {
     <Section className="grid grid-cols-1 lg:grid-cols-2">
       <div className="relative min-h-[320px] overflow-hidden border-b border-rule lg:border-b-0 lg:border-r">
         <img
-          src={tower}
-          alt=""
-          aria-hidden
-          className="absolute inset-0 h-full w-full object-cover opacity-0"
-        />
-        <img
           src={tower.url}
           alt="Wireframe perspective of a high-rise concrete tower"
           className="h-full w-full object-cover"
