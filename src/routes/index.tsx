@@ -1,24 +1,58 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/heron/nav";
+import { Hero } from "@/components/heron/hero";
+import {
+  CTA,
+  Clients,
+  Footer,
+  Introduction,
+  Marquee,
+  Problems,
+  Product,
+  Statement,
+  UseCases,
+  Violations,
+  Why,
+} from "@/components/heron/sections";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Heron AI — AI agent inside Revit, Rhino & ArchiCAD" },
+      {
+        name: "description",
+        content:
+          "Heron AI reviews your BIM model, flags building code violations, and makes edits on your approval — inside Revit, Rhino, ArchiCAD and SketchUp.",
+      },
+      { property: "og:title", content: "Heron AI — AI agent inside your design tools" },
+      {
+        property: "og:description",
+        content:
+          "An AI agent that sees your model, spots code issues, and fixes them on approval without leaving your design software.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="min-h-screen bg-paper text-ink">
+      <Nav />
+      <Hero />
+      <Marquee />
+      <Statement />
+      <Clients />
+      <Problems />
+      <Introduction />
+      <Violations />
+      <Product />
+      <Why />
+      <UseCases />
+      <CTA />
+      <Footer />
+    </main>
   );
 }
