@@ -2,18 +2,19 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/heron/nav";
 import { Hero } from "@/components/heron/hero";
 import {
+  AgentPanel,
   CTA,
   Clients,
   Footer,
   Introduction,
   Marquee,
   Problems,
-  Product,
+  Showcases,
   Statement,
   UseCases,
-  Violations,
   Why,
 } from "@/components/heron/sections";
+import { CursorTrail } from "@/components/heron/cursor";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -40,6 +41,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <main className="min-h-screen bg-paper text-ink">
+      <CursorTrail />
       <Nav />
       <Hero />
       <Marquee />
@@ -47,8 +49,8 @@ function Index() {
       <Clients />
       <Problems />
       <Introduction />
-      <Violations />
-      <Product />
+      <AgentPanel />
+      <Showcases />
       <Why />
       <UseCases />
       <CTA />

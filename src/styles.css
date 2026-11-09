@@ -169,3 +169,29 @@
 @utility signal-dot {
   animation: blink-dot 1.6s steps(1, end) infinite;
 }
+
+/* Hide the native cursor while the red-square trail cursor is mounted */
+.heron-cursor body,
+.heron-cursor a,
+.heron-cursor button,
+.heron-cursor input,
+.heron-cursor [role="button"] {
+  cursor: none;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@utility fade-in {
+  animation: fade-in 0.55s ease both;
+}
+
+@utility word {
+  transition: color 0.35s ease;
+}

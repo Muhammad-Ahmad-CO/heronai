@@ -27,12 +27,13 @@ export function Nav() {
         <a href="#top" className="flex items-center gap-3 px-5 py-4">
           <svg viewBox="0 0 32 32" className="h-6 w-6" aria-hidden>
             <path
-              d="M4 10 16 4l12 6v12l-12 6L4 22z"
+              d="M6 9 L13 5.5 V13 L19 10 V6.5 L26 10 V26.5 L19 23 V15.5 L13 18.5 V26 L6 22.5 Z"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1.4"
+              strokeWidth="1.5"
+              strokeLinejoin="round"
             />
-            <path d="M4 10l12 6 12-6M16 16v12" fill="none" stroke="currentColor" strokeWidth="1.4" />
+            <path d="M13 13 L19 16 M13 18.5 L19 15.5" fill="none" stroke="currentColor" strokeWidth="1.5" />
           </svg>
           <span className="font-display text-lg font-semibold tracking-tight uppercase">
             Heron AI
