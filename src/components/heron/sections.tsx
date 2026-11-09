@@ -99,7 +99,9 @@ export function Statement() {
       </div>
       <div className="flex flex-col justify-center gap-10 px-5 py-14 md:px-10">
         <WordReveal text="The repetitive parts of modelling shouldn't eat your day. Heron handles the fiddly, manual work so you can stay focused on the design, not the software." />
-        <ArrowLink href="#product">Learn more</ArrowLink>
+        <div className="flex">
+          <ArrowLink href="#product">Learn more</ArrowLink>
+        </div>
       </div>
     </Section>
   );
